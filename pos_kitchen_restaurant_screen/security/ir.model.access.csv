@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_manager_pos_kitchen_order,_manager.pos.kitchen.order,model_pos_kitchen_order,point_of_sale.group_pos_manager,1,1,1,1
+access_user_pos_kitchen_order,user.pos.kitchen.order,model_pos_kitchen_order,point_of_sale.group_pos_user,1,1,1,0
+access_manager_pos_kitchen_order_line,_manager.pos.kitchen.orderline,model_pos_kitchen_orderline,point_of_sale.group_pos_manager,1,1,1,1
+access_user_pos_kitchen_order_line,user.pos.kitchen.orderline,model_pos_kitchen_orderline,point_of_sale.group_pos_user,1,1,1,0
