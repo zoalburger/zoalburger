@@ -17,7 +17,7 @@
   "name"                 :  "Pos Kitchen Restaurant Screen",
   "summary"              :  "This is the base module for other modules related to the Pos Kitchen Screen Base. User can visualize all the kitchen related requirements on a screen inside kitchen.",
   "category"             :  "Point Of Sale",
-  "version"              :  "1.3",
+  "version"              :  "1.3.0",
   "author"               :  "Webkul Software Pvt. Ltd.",
   "license"              :  "Other proprietary",
   "website"              :  "https://store.webkul.com",
