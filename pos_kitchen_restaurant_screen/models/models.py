@@ -131,8 +131,8 @@ class PosKitchenOrder(models.Model):
 						vals['name'] = order.name
 						vals['amount_total'] = order.amount_total
 						vals['pos_reference'] = order.pos_reference
-						vals['table_id'] = [order.table_id.id,order.table_id.name]
-						vals['floor_id'] = [order.floor_id.id,order.floor_id.name]
+						vals['table_id'] = [order.table_id and order.table_id.id or 1,order.table_id and order.table_id.name or '']
+						vals['floor_id'] = [order.floor_id and order.floor_id.id or 1,order.floor_id and order.floor_id.name or '']
 						vals['order_progress'] = order.order_progress
 						vals['date_order'] = order.date_order
 						vals['kitchen_order_name'] = order.kitchen_order_name
