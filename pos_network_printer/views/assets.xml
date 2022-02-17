@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+    <template id="pos_network_printer_assets" inherit_id="point_of_sale.assets">
+      <xpath expr="." position="inside">
+        <!-- lib -->
+        <script type="text/javascript" src="/pos_network_printer/static/src/lib/cptable.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/lib/cputils.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/lib/deflate.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/lib/JSESCPOSBuilder.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/lib/JSPrintManager.js"></script>
+        <!-- pos -->
+        <script type="text/javascript" src="/pos_network_printer/static/src/js/models.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/js/printer.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/js/chrome.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/js/screens.js"></script>
+        <script type="text/javascript" src="/pos_network_printer/static/src/js/multiprint.js"></script>
+      </xpath>
+    </template>
+  </data>
+</odoo>
