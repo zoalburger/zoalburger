@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_network_printer,network.printer,model_network_printer,base.group_user,1,1,1,1
+access_printer_connector_default,printer.connector,model_printer_connector,,1,0,0,0
+access_printer_connector,printer.connector,model_printer_connector,pos_network_printer.group_user_printer_connector,1,1,1,1
+access_queue_print_default,queue.print,model_queue_print,,1,0,0,0
+access_queue_print,queue.print,model_queue_print,pos_network_printer.group_user_printer_connector,1,1,1,1
+access_network_printer_connector,network_printer,pos_network_printer.model_network_printer,pos_network_printer.group_user_printer_connector,1,0,0,0
