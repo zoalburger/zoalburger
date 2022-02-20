@@ -50,7 +50,7 @@
              '/pos_network_printer/static/src/js/multiprint.js'
              ],
         'web.assets_qweb': [
-            'pos_network_printer/static/src/xml/pos.xml',
+            'pos_network_printer/static/src/xml/**/*',
         ],
     },
     'price': '350',
