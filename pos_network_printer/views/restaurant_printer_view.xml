@@ -6,7 +6,7 @@
       <field name="model">restaurant.printer</field>
       <field name="inherit_id" ref="pos_restaurant_iot.view_restaurant_printer_iot_form"/>
       <field name="arch" type="xml">
-        <field name="device_id" position="after">
+        <field name="product_categories_ids" position="after">
           <field name="printer_ip" attrs="{'invisible':[('printer_type','!=','nt_printer')], 'required': [('printer_type','=','nt_printer')]}"/>
           <field name="printer_port" attrs="{'invisible':[('printer_type','!=','nt_printer')], 'required': [('printer_type','=','nt_printer')]}"/>
           <field name="connector_id" attrs="{'invisible':[('printer_type','!=','nt_printer')],'required': [('printer_type','=','nt_printer')]}"/>
@@ -19,7 +19,7 @@
       <field name="model">restaurant.printer</field>
       <field name="inherit_id" ref="pos_restaurant_iot.view_restaurant_printer_iot_tree"/>
       <field name="arch" type="xml">
-        <field name="device_id" position="after">
+        <field name="product_categories_ids" position="after">
           <field name="proxy_ip" string="IP Address"/>
           <field name="printer_port"/>
           <field name="connector_id"/>

@@ -19,6 +19,7 @@
         'base',
         'point_of_sale',
         'pos_restaurant',
+        'pos_restaurant_iot'
     ],
     'qweb': ['static/src/xml/pos.xml'],
     'data': [
