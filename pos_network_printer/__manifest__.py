@@ -21,7 +21,7 @@
         'pos_restaurant',
         'pos_restaurant_iot'
     ],
-    'qweb': ['static/src/xml/pos.xml'],
+    # 'qweb': ['static/src/xml/pos.xml'],
     'data': [
         # security
         'security/security.xml',
@@ -49,6 +49,9 @@
              '/pos_network_printer/static/src/js/screens.js',
              '/pos_network_printer/static/src/js/multiprint.js'
              ],
+        'web.assets_qweb': [
+            'pos_network_printer/static/src/xml/pos.xml',
+        ],
     },
     'price': '350',
     'currency': 'EUR',
