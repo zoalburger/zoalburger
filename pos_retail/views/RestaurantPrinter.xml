@@ -17,7 +17,7 @@
             <field name="inherit_id" ref="pos_restaurant.view_restaurant_printer_form"/>
             <field name="model">restaurant.printer</field>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='proxy_ip']" position="replace">
+                <xpath expr="//field[@name='product_categories_ids']" position="after">
                     <field name="printer_id" attrs="{'invisible': [('printer_type', '!=', 'network')], 'required': [('printer_type', '!=', 'iot')]}"/>
                     <field name="proxy_ip" attrs="{'invisible': [('printer_type', 'in', ['network', 'epson_epos'])], 'required': [('printer_type', '=', 'iot')]}"/>
                     <field name="branch_id"/>

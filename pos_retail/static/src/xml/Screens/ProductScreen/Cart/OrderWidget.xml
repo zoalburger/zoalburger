@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="OrderWidget" t-inherit="point_of_sale.OrderWidget" t-inherit-mode="extension" owl="1">
+        <xpath expr="//OrderSummary" position="replace">
+            <OrderSummary total="state.total"
+                          tax="state.tax"
+                          discount="state.discount"
+                          margin="state.margin"
+                          screen="props.screen"
+                          totalItems="state.totalItems"
+                          totalQuantities="state.totalQuantities"
+                          totalWithOutTaxes="state.totalWithOutTaxes"/>
+        </xpath>
+        <xpath expr="//ul[hasclass('orderlines')]" position="replace">
+            <table class='summary-table'>
+                <colgroup>
+                    <col width='5%'/>
+                    <col width='45%'/>
+                    <col width='10%' t-if="props.screen == 'Products'"/>
+                    <col width='15%' t-if="props.screen == 'Products'"/>
+                    <col width='20%'/>
+                    <col width='5%' t-if="props.screen == 'Products'"/>
+                </colgroup>
+                <tr class="receipt-line">
+                    <td style="text-align: center">
+                        No.
+                    </td>
+                    <td style="text-align: center">
+                        Item
+                    </td>
+                    <td style="text-align: center" t-if="props.screen == 'Products'">
+                        Qty
+                    </td>
+                    <td style="text-align: center" t-if="props.screen == 'Products'">
+                        Price
+                    </td>
+                    <td style="text-align: center">
+                        Sub Total
+                    </td>
+                    <td style="text-align: center" t-if="props.screen == 'Products'">
+                        <i class="fa fa-trash"/>
+                    </td>
+                </tr>
+                <t t-foreach="orderlinesArray" t-as="orderline" t-key="orderline.id">
+                    <Orderline line="orderline" screen="props.screen"/>
+                </t>
+            </table>
+        </xpath>
+    </t>
+
+</templates>

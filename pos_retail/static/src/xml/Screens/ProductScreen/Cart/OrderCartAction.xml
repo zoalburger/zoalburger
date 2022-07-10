@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="OrderCartAction" owl="1">
+        <div class="subpads">
+            <div t-if="itemsInCart" class="pos-cart">
+                <NumpadWidget activeMode="state.numpadMode"/>
+                <button class="button pay send-kitchen"
+                        t-att-class="addedClasses"
+                        t-if="!env.pos.session.restaurant_order and payButtonClasses['restaurant']"
+                        t-on-click="clickSendToKitchen">
+                    <span class="sub-value">
+                        Send to Kitchen
+                        <span class="with-badge" t-att-badge="countItemsNeedPrint">
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </button>
+                <button class="button pay"
+                        t-att-class="payButtonClasses"
+                        t-on-click="trigger('click-pay')">
+                    <t t-if="!env.pos.session.restaurant_order">
+                        <t t-if="!env.pos.config.replace_paid_button_to_assign">
+                            <span class="total-value">
+                                <t t-if="payButtonClasses['warning']">
+                                    Return
+                                </t>
+                                <t t-else="">
+                                    PAID
+                                </t>
+                            </span>
+                            <span class="total-value">
+                                <t t-esc="state.total"/>
+                            </span>
+                            <span class="sub-value">
+                                 Taxes: <span t-esc="state.tax"/>
+                                / Quantities:
+                                <span t-esc="state.totalQuantities"/>
+                            </span>
+                        </t>
+                        <t t-else="">
+                            <h1>
+                                ASSIGN ORDER
+                            </h1>
+                        </t>
+                        <span class="shortcut-keyboard" t-if="!env.isMobile">
+                            <i class="fa fa-keyboard-o"/>
+                            (Enter)
+                        </span>
+                    </t>
+                    <t t-else="">
+                        <i class="fa fa-check"/>
+                        PLACE
+                    </t>
+                </button>
+            </div>
+        </div>
+    </t>
+
+</templates>
